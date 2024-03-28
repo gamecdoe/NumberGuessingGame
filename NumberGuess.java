@@ -97,7 +97,7 @@ public class NumberGuess {
 
         // Declare a number for the user to guess
         int randomNumber = (int) (Math.random() * maxRange) + 1; // pick a random number from 1-100, which the useer will have to guess
-        System.out.println(randomNumber);
+        // System.out.println(randomNumber);
 
 
         //While loop that checks if the input is not equal to the random number
@@ -123,7 +123,7 @@ public class NumberGuess {
                     attemptedGuessed++;
                 }
                 if (guess < randomNumber) {
-                    System.out.println("To low!");
+                    System.out.println("Too low!");
                     amountOfGuesses--;
                     attemptedGuessed++;
                 }
@@ -133,6 +133,9 @@ public class NumberGuess {
             }
 
         }
+
+        attemptedGuessed++;
+        amountOfGuesses--;
 
         // If the user wins/looses, they will be prompted with either of these messages.
         if (guess == randomNumber) {
